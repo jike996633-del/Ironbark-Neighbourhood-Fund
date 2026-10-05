@@ -1,0 +1,12 @@
+{
+  "name": "ironbark-pages",
+  "version": "1.0.0",
+  "description": "Timetable site for Ironbark Neighbourhood Fund",
+  "main": "serve.js",
+  "scripts": {
+    "start": "node serve.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
