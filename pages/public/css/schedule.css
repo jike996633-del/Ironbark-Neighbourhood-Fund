@@ -1,0 +1,226 @@
+:root {
+  --clay: #9a3412;
+  --olive: #3f4a2b;
+  --sand: #efe4d2;
+  --ink: #2b2118;
+  --line: #c4b39a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--sand);
+  color: var(--ink);
+  font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.frame {
+  min-height: 100vh;
+}
+
+.topbar {
+  background: var(--olive);
+  color: #f6f0e4;
+  padding: 18px 28px 0;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.topbar p {
+  margin: 4px 0 14px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+nav {
+  display: flex;
+  gap: 0;
+}
+
+nav a {
+  color: #f6f0e4;
+  text-decoration: none;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+}
+
+nav a[aria-current="page"] {
+  background: var(--sand);
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.stage {
+  padding: 24px 28px 72px;
+}
+
+.intro {
+  margin: 0 0 18px;
+  max-width: 52rem;
+  line-height: 1.45;
+}
+
+.board {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.board th,
+.board td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.board th {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--olive);
+}
+
+.board a {
+  color: var(--clay);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.board a:hover {
+  text-decoration: underline;
+}
+
+.stamp {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--clay);
+  color: var(--clay);
+  padding: 2px 6px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: end;
+  margin-bottom: 18px;
+}
+
+.toolbar label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid var(--olive);
+  background: #fffaf1;
+  color: var(--ink);
+}
+
+button {
+  background: var(--clay);
+  color: #fffaf1;
+  border-color: var(--clay);
+  cursor: pointer;
+}
+
+button[type="reset"] {
+  background: transparent;
+  color: var(--olive);
+  border-color: var(--olive);
+}
+
+.flash,
+.alert {
+  padding: 10px 12px;
+  margin: 0 0 16px;
+  border-left: 4px solid var(--olive);
+  background: #fffaf1;
+}
+
+.alert {
+  border-left-color: var(--clay);
+}
+
+.sheet h2 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  color: var(--olive);
+}
+
+.sheet p {
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.meter {
+  height: 12px;
+  background: #ddd3c2;
+  margin: 8px 0 18px;
+}
+
+.meter > i {
+  display: block;
+  height: 100%;
+  background: var(--clay);
+}
+
+.pairs {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 8px 16px;
+  margin: 0 0 18px;
+  max-width: 520px;
+}
+
+form.sign {
+  display: grid;
+  gap: 10px;
+  max-width: 380px;
+}
+
+dialog {
+  border: 0;
+  background: #fffaf1;
+  color: var(--ink);
+  padding: 22px;
+  box-shadow: 0 12px 40px rgba(43, 33, 24, 0.25);
+}
+
+dialog::backdrop {
+  background: rgba(63, 74, 43, 0.35);
+}
+
+@media (max-width: 720px) {
+  .topbar,
+  .stage {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .board {
+    display: block;
+    overflow-x: auto;
+  }
+}
