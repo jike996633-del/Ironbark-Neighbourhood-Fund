@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search — Ironbark Neighbourhood Fund</title>
+  <link rel="stylesheet" href="css/schedule.css">
+</head>
+<body>
+  <div class="frame">
+    <header class="topbar">
+      <h1>Ironbark Neighbourhood Fund</h1>
+      <p>Adelaide timetable · filters include past nights</p>
+      <nav>
+        <a href="start.html">Home</a>
+        <a href="look.html">Search</a>
+      </nav>
+    </header>
+    <main class="stage">
+      <form id="look-form" class="toolbar">
+        <label>Date<input type="date" name="date" id="date"></label>
+        <label>Location<input type="text" name="location" id="location"></label>
+        <label>Category
+          <select name="category" id="category">
+            <option value="">Any</option>
+          </select>
+        </label>
+        <button type="submit">Apply</button>
+        <button type="reset">Clear</button>
+      </form>
+      <p id="flash" hidden></p>
+      <table class="board">
+        <thead>
+          <tr>
+            <th>When</th>
+            <th>Night</th>
+            <th>Place</th>
+            <th>Kind</th>
+            <th>Ticket</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </main>
+  </div>
+  <script src="js/shared.js"></script>
+  <script src="js/look-page.js"></script>
+</body>
+</html>
